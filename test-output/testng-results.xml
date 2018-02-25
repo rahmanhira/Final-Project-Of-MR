@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="testNG Framework" duration-ms="4461" started-at="2018-01-14T15:03:14Z" finished-at="2018-01-14T15:03:19Z">
+  <suite name="testNG Framework" duration-ms="7457" started-at="2018-02-25T15:43:39Z" finished-at="2018-02-25T15:43:47Z">
     <groups>
     </groups>
-    <test name="chrome test" duration-ms="4451" started-at="2018-01-14T15:03:14Z" finished-at="2018-01-14T15:03:19Z">
+    <test name="chrome test" duration-ms="7445" started-at="2018-02-25T15:43:39Z" finished-at="2018-02-25T15:43:47Z">
       <class name="tests.pass">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:tests.pass@294425a7]" name="setUp" is-config="true" duration-ms="2886" started-at="2018-01-14T10:03:14Z" finished-at="2018-01-14T10:03:17Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:tests.pass@294425a7]" name="setUp" is-config="true" duration-ms="5823" started-at="2018-02-25T10:43:39Z" finished-at="2018-02-25T10:43:45Z">
           <params>
             <param index="0">
               <value>
@@ -18,21 +18,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="readFromXl()[pri:0, instance:tests.pass@294425a7]" name="readFromXl" duration-ms="161" started-at="2018-01-14T10:03:17Z" finished-at="2018-01-14T10:03:18Z">
+        <test-method status="PASS" signature="readFromXl()[pri:0, instance:tests.pass@294425a7]" name="readFromXl" duration-ms="160" started-at="2018-02-25T10:43:45Z" finished-at="2018-02-25T10:43:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readFromXl -->
-        <test-method status="PASS" signature="writeIntoXl()[pri:0, instance:tests.pass@294425a7]" name="writeIntoXl" duration-ms="1258" started-at="2018-01-14T10:03:18Z" finished-at="2018-01-14T10:03:19Z">
+        <test-method status="PASS" signature="writeIntoXl()[pri:0, instance:tests.pass@294425a7]" name="writeIntoXl" duration-ms="1315" started-at="2018-02-25T10:43:45Z" finished-at="2018-02-25T10:43:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeIntoXl -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.pass@294425a7]" name="teardown" is-config="true" duration-ms="136" started-at="2018-01-14T10:03:19Z" finished-at="2018-01-14T10:03:19Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.pass@294425a7]" name="teardown" is-config="true" duration-ms="137" started-at="2018-02-25T10:43:47Z" finished-at="2018-02-25T10:43:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- tests.pass -->
     </test> <!-- chrome test -->
-    <test name="fireFox test" duration-ms="0" started-at="2018-01-14T15:03:19Z" finished-at="2018-01-14T15:03:19Z">
+    <test name="fireFox test" duration-ms="1" started-at="2018-02-25T15:43:47Z" finished-at="2018-02-25T15:43:47Z">
     </test> <!-- fireFox test -->
   </suite> <!-- testNG Framework -->
 </testng-results>

@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.By;
+import org.testng.SkipException;
 import org.testng.annotations.Test;
 import base.Config;
 import locators.locators1;
@@ -29,6 +30,21 @@ public class skip extends Config {
 	public void writeIntoXl(){
 		String actText = driver.findElement(By.xpath(loc.signUpTextLoc)).getText();
 		xl.setCellData("testData", "textTest", 2, actText);
+		
+	}
+	
+@Test ()
+public void goingToSkip(){
+	
+	System.out.println("This test has been skipped");
+	throw new SkipException ("Skipping because this test is no longer needed!!");
+	// selenium code
+		
 	}
 
 }
+
+
+
+	
+
