@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="testNG Framework" duration-ms="4461" started-at="2018-01-14T15:03:14Z" finished-at="2018-01-14T15:03:19Z">
+    <groups>
+    </groups>
+    <test name="chrome test" duration-ms="4451" started-at="2018-01-14T15:03:14Z" finished-at="2018-01-14T15:03:19Z">
+      <class name="tests.pass">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:tests.pass@294425a7]" name="setUp" is-config="true" duration-ms="2886" started-at="2018-01-14T10:03:14Z" finished-at="2018-01-14T10:03:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ch]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="readFromXl()[pri:0, instance:tests.pass@294425a7]" name="readFromXl" duration-ms="161" started-at="2018-01-14T10:03:17Z" finished-at="2018-01-14T10:03:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readFromXl -->
+        <test-method status="PASS" signature="writeIntoXl()[pri:0, instance:tests.pass@294425a7]" name="writeIntoXl" duration-ms="1258" started-at="2018-01-14T10:03:18Z" finished-at="2018-01-14T10:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeIntoXl -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.pass@294425a7]" name="teardown" is-config="true" duration-ms="136" started-at="2018-01-14T10:03:19Z" finished-at="2018-01-14T10:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tests.pass -->
+    </test> <!-- chrome test -->
+    <test name="fireFox test" duration-ms="0" started-at="2018-01-14T15:03:19Z" finished-at="2018-01-14T15:03:19Z">
+    </test> <!-- fireFox test -->
+  </suite> <!-- testNG Framework -->
+</testng-results>
