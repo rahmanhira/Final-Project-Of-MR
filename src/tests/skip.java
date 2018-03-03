@@ -14,25 +14,12 @@ public class skip extends Config {
 	locators1 loc  = new locators1();
 
 
-	@Test
-	public void readFromXl (){
-
 		// getCellData(String sheetName,String colName,int rowNum)
 		// sheetName = "testData"
 		// colName = "firstName"
 		// rowNum =  2
 
-		typeByXpath (loc.emailLoc, xl.getCellData("testData", "email", 2));
-
-	};
-
-	@Test
-	public void writeIntoXl(){
-		String actText = driver.findElement(By.xpath(loc.signUpTextLoc)).getText();
-		xl.setCellData("testData", "textTest", 2, actText);
 		
-	}
-	
 @Test ()
 public void goingToSkip(){
 	

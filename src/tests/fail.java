@@ -24,14 +24,14 @@ public class fail extends Config {
 		// colName = "firstName"
 		// rowNum =  2
 
-		typeByXpath (loc.emailLoc, xl.getCellData("testData", "email", 2));
+		typeByXpath (loc.emailLoc, xl.getCellData("testData", "imail", 2));
 
 	};
 
 	@Test
 	public void writeIntoXl(){
 		String actText = driver.findElement(By.xpath(loc.signUpTextLoc)).getText();
-		xl.setCellData("testData", "textTest", 2, actText);
+		xl.setCellData("testData", "TextTest", 2, actText);
 	}
 
 }

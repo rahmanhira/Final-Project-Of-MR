@@ -9,6 +9,8 @@
 		<classes>
 			<class name="tests.pass" />
 			<class name="tests.skip" />
+			<class name="tests.fail" />
+			
 			
 			
 			

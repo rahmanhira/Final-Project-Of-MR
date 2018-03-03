@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-testNG_Framework">
-              <span class="suite-name border-passed">testNG Framework</span>
+              <span class="suite-name border-failed">testNG Framework</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,40 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,  1 skipped,  2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-testNG_Framework" class="hide-methods failed suite-testNG_Framework"> (hide)</a> <!-- hide-methods failed suite-testNG_Framework -->
+                      <a href="#" panel-name="suite-testNG_Framework" class="show-methods failed suite-testNG_Framework"> (show)</a> <!-- show-methods failed suite-testNG_Framework -->
+                    </span>
+                    <div class="method-list-content failed suite-testNG_Framework">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-testNG_Framework" title="tests.fail" hash-for-method="readFromXl">readFromXl</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-testNG_Framework" title="tests.fail" hash-for-method="writeIntoXl">writeIntoXl</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-testNG_Framework -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-testNG_Framework" class="hide-methods skipped suite-testNG_Framework"> (hide)</a> <!-- hide-methods skipped suite-testNG_Framework -->
+                      <a href="#" panel-name="suite-testNG_Framework" class="show-methods skipped suite-testNG_Framework"> (show)</a> <!-- show-methods skipped suite-testNG_Framework -->
+                    </span>
+                    <div class="method-list-content skipped suite-testNG_Framework">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-testNG_Framework" title="tests.skip" hash-for-method="goingToSkip">goingToSkip</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-testNG_Framework -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -121,6 +154,56 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-testNG_Framework" class="panel testNG_Framework">
+          <div class="suite-testNG_Framework-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.fail</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="readFromXl">
+                  </a> <!-- readFromXl -->
+                  <span class="method-name">readFromXl</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at utils.webDriverApi.typeByXpath(webDriverApi.java:15)
+	at tests.fail.readFromXl(fail.java:27)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="writeIntoXl">
+                  </a> <!-- writeIntoXl -->
+                  <span class="method-name">writeIntoXl</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at tests.fail.writeIntoXl(fail.java:33)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-testNG_Framework-class-failed -->
+          <div class="suite-testNG_Framework-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tests.skip</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="goingToSkip">
+                  </a> <!-- goingToSkip -->
+                  <span class="method-name">goingToSkip</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping because this test is no longer needed!!
+	at tests.skip.goingToSkip(skip.java:27)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-testNG_Framework-class-skipped -->
           <div class="suite-testNG_Framework-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -157,6 +240,8 @@
     &lt;parameter name=&quot;browser&quot; value=&quot;ch&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.pass&quot;/&gt;
+      &lt;class name=&quot;tests.skip&quot;/&gt;
+      &lt;class name=&quot;tests.fail&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- chrome test --&gt;
   &lt;test name=&quot;fireFox test&quot;&gt;
@@ -173,7 +258,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">chrome test (1 class)</span>
+                <span class="test-name">chrome test (3 classes)</span>
               </li>
               <li>
                 <span class="test-name">fireFox test (0 classes)</span>
@@ -202,15 +287,27 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'writeIntoXl')
 data.setCell(0, 2, 'tests.pass')
-data.setCell(0, 3, 1315);
+data.setCell(0, 3, 1254);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'readFromXl')
 data.setCell(1, 2, 'tests.pass')
-data.setCell(1, 3, 160);
+data.setCell(1, 3, 169);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'writeIntoXl')
+data.setCell(2, 2, 'tests.fail')
+data.setCell(2, 3, 1);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'readFromXl')
+data.setCell(3, 2, 'tests.fail')
+data.setCell(3, 3, 1);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'goingToSkip')
+data.setCell(4, 2, 'tests.skip')
+data.setCell(4, 3, 1);
 window.suiteTableData['testNG_Framework']= { tableData: data, tableDiv: 'times-div-testNG_Framework'}
 return data;
 }
@@ -230,9 +327,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-testNG_Framework" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.fail</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">teardown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.skip</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">teardown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-testNG_Framework" class="panel">
@@ -248,15 +363,40 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">readFromXl</span>
-                <span class="method-start">5828 ms</span>
+                <span class="method-start">2709 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">writeIntoXl</span>
-                <span class="method-start">5989 ms</span>
+                <span class="method-start">2879 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.skip</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">goingToSkip</span>
+                <span class="method-start">4135 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.fail</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">readFromXl</span>
+                <span class="method-start">4137 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">writeIntoXl</span>
+                <span class="method-start">4140 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.pass</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">7306 ms</span>
+                <span class="method-start">4142 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
